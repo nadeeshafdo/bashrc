@@ -1,0 +1,67 @@
+# Custom .bashrc additions
+
+# Unset HISTFILE to disable history file
+unset HISTFILE
+
+# Modified ls aliases
+alias ls='ls --color=auto -Ah'
+alias ll='ls -lh'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Editor setting
+export EDITOR='kate'
+
+# Custom aliases - Set 0
+alias b='cd .. && ls -lh'
+alias r='cd / && ls -lh'
+alias h='cd ~ && ls -lh'
+alias ver='cat /etc/os-release'
+alias del='rm -rf'
+alias d='cd ~/Desktop'
+alias brc='$EDITOR ~/.bashrc'
+alias aptup='sudo apt-get update && sudo apt update && sudo apt upgrade'
+alias c='clear'
+alias t='tree'
+alias tg='tree --gitignore'
+alias cls='clear'
+alias q='exit'
+alias scr='source ~/.bashrc && echo ".bashrc reloaded!"'
+
+# Custom aliases - Set 1 (Git)
+alias ginit='git init -b main'
+alias gc='git clone'
+alias gs='git status'
+alias gb='git branch'
+alias gbv='git branch -v'
+alias gbr='git branch -r'
+alias gba='git branch -a'
+alias gsa='git status -uall'
+alias gall='git status -uall && git add . && noto -a && git push'
+alias gsw='git switch'
+alias gr='git reset'
+alias grh='git reset --hard'
+alias grhh='git reset --hard HEAD'
+alias gpl='git pull'
+alias gps='git push'
+alias gpsf='git push --force'
+alias github='github-desktop'
+
+# Custom aliases - Set 2 (Bun)
+alias binit='bun init'
+alias bi='bun install'
+alias br='bun run'
+alias brd='bun run dev'
+alias brb='bun run build'
+alias brs='bun run start'
+alias bra='bun run android'
+alias bri='bun run ios'
+alias brw='bun run web'
+
+# Custom aliases - Set 3 (NPM)
+alias ninit='npm init'
+alias ni='npm install'
+alias nr='npm run'
+alias nrd='npm run dev'
+alias nrb='npm run build'
+alias nrs='npm run start'
