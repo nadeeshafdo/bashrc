@@ -6,7 +6,7 @@ A custom `.bashcfg` file to enhance the bash experience on Debian-based systems 
 ## First-Time Setup
 1. Copy the `.bashcfg` file to your home directory:
    ```bash
-   touch /.bashcfg # then copy-paste the contents.
+   touch ~/.bashcfg # then copy-paste the contents.
    ```
 2. Run the following command to source the custom configurations via `.bashrc`:
    ```bash
