@@ -2,13 +2,14 @@
 # Feel free to modify this configuration file as you want.
 # Following given aliases template need following binaries/packages to work,
 # neofetch or fastfetch, kate or nano or vim, tree, git, bun, nodejs
-
+alias cfginstall='sudo apt install fastfetch tree git nodejs'
 # Uncomment to clear the previous session every time this loads
+#unalias -a
 #cd ~ && history -c && clear
 
 # Welcome screen
 #neofetch
-#fastfetch
+fastfetch
 
 # Uncomment to unset HISTFILE to disable history file
 #unset HISTFILE
