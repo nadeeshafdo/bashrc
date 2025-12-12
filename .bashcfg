@@ -1,32 +1,45 @@
-# Custom .bashrc additions
+# Custom configurations
+# Feel free to modify this configuration file as you want.
+# Following given aliases template need following binaries/packages to work,
+# neofetch or fastfetch, kate or nano or vim, tree, git, bun, nodejs
 
-# Unset HISTFILE to disable history file
-unset HISTFILE
+# Uncomment to clear the previous session every time this loads
+#cd ~ && history -c && clear
+
+# Welcome screen
+#neofetch
+#fastfetch
+
+# Uncomment to unset HISTFILE to disable history file
+#unset HISTFILE
 
 # Modified ls aliases
 alias ls='ls --color=auto -Ah'
-alias ll='ls -lh'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alh'
 
-# Editor setting
-export EDITOR='kate'
+# Editor setting (kate / nano / vim)
+export EDITOR='nano'
 
 # Custom aliases - Set 0
-alias b='cd .. && ls -lh'
-alias r='cd / && ls -lh'
-alias h='cd ~ && ls -lh'
-alias ver='cat /etc/os-release'
-alias del='rm -rf'
-alias d='cd ~/Desktop'
+alias b='cd ..'
+alias r='cd /'
+alias h='cd ~'
+
+# Custom cd function to list directory contents after changing
+cd() {
+  builtin cd "$@" && ls -lh
+}
+
+# alias ver='neofetch '
 alias brc='$EDITOR ~/.bashrc'
-alias aptup='sudo apt-get update && sudo apt update && sudo apt upgrade'
+alias cfg='$EDITOR ~/.bashcfg'
+alias aptup='sudo apt-get update && sudo apt update && sudo apt upgrade' # This one can be diff based on the OS dist. (Given is for Debian based systems)
 alias c='clear'
 alias t='tree'
 alias tg='tree --gitignore'
 alias cls='clear'
 alias q='exit'
-alias scr='source ~/.bashrc && echo ".bashrc reloaded!"'
+alias src='source ~/.bashrc'
 
 # Custom aliases - Set 1 (Git)
 alias ginit='git init -b main'
@@ -37,7 +50,9 @@ alias gbv='git branch -v'
 alias gbr='git branch -r'
 alias gba='git branch -a'
 alias gsa='git status -uall'
+alias gl='git log'
 alias gall='git status -uall && git add . && noto -a && git push'
+alias gallo='git status -uall && git add . && noto -a'
 alias gsw='git switch'
 alias gr='git reset'
 alias grh='git reset --hard'
@@ -50,6 +65,8 @@ alias github='github-desktop'
 # Custom aliases - Set 2 (Bun)
 alias binit='bun init'
 alias bi='bun install'
+alias bu='bun update'
+alias bug='bun upgrade'
 alias br='bun run'
 alias brd='bun run dev'
 alias brb='bun run build'
